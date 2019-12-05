@@ -52,15 +52,8 @@ public class LoginServlet extends HttpServlet {
 
 		if(login == true) {
 			ArrayList<String> list = new ArrayList<String>();
-			req.setAttribute(list);
-
-
-
-
-
-
-
-
+			jb.cada();
+			list = jb.cada();
 			RequestDispatcher rd = req.getRequestDispatcher("jsp/search.jsp");
 			rd.forward(req,resp);
 		}else {

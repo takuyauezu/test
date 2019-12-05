@@ -98,7 +98,7 @@ public class JDBC {
 		return flg;
 	}
 
-	public  ArrayList<String>  cada () throws SQLException{
+	public  ArrayList<String>  cada (){
 		// TODO 自動生成されたメソッド・スタブ
 
 
@@ -147,6 +147,9 @@ public class JDBC {
 			}
 			return list;
 
+		} catch (SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
 		} finally {
 			try {
 				// 各部品はDBの処理が終わったら閉じなければならない。
@@ -165,5 +168,6 @@ public class JDBC {
 				ex.printStackTrace();
 			}
 		}
+		return list;
 	}
 }
