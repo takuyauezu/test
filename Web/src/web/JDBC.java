@@ -104,7 +104,7 @@ public class JDBC {
 
 		// DBに接続するために必要な情報を変数定義している。
 		// 接続する場所を定義（URLとして)
-		boolean flg =false;
+
 		String url = "jdbc:mysql://localhost/ec";
 		// 接続する際のIDを定義
 		String id = "root";
@@ -140,6 +140,7 @@ public class JDBC {
 
 			while(rs.next()) {
 			 category1 = rs.getString("cat_name");
+			 System.out.println(category1);
 
 
 				 list.add(category1);

@@ -52,8 +52,10 @@ public class LoginServlet extends HttpServlet {
 
 		if(login == true) {
 			ArrayList<String> list = new ArrayList<String>();
-			jb.cada();
 			list = jb.cada();
+			System.out.println("とってきた"+list.get(0));
+			 req.setAttribute("category", list);
+
 			RequestDispatcher rd = req.getRequestDispatcher("jsp/search.jsp");
 			rd.forward(req,resp);
 		}else {
